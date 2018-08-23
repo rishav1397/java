@@ -1,0 +1,27 @@
+Git Commands :
+
+1) git init <to add folder to git>
+
+2) git touch <to create a file>
+
+3) git status <for status>
+
+4) git add. <for all files>
+
+5) git add filename with extension <for individual file>
+
+6) git config
+         
+                --globall <for all the projects of a user>
+                --local <for a particular project>
+               --system <for all the projects of all the users in the system>
+
+7) git config –local user.name “naman”
+
+8) git commit -m “message”
+
+9) git remote add origin <url>
+
+10) git remote show origin
+
+11) git push -u origin master <for login page>
