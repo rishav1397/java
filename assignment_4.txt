@@ -1,0 +1,155 @@
+1:
+import java.util.*;
+class static1 {
+    static int i;
+    int j;
+    static {
+        i = 10;
+        System.out.println("static block ");
+    }
+    static1(){
+        System.out.println("Constructor called");
+    }
+}
+ 
+public class wavelength{
+    public static void main(String[] a) {
+ 
+       static1 t1 = new static1();
+       static1 t2 = new static1();
+    }
+}
+
+------------------------------------------------------------------------------------
+
+2:
+inheritance and overloading(animal)
+
+import java.util.Scanner;
+abstract class Anim
+{
+    private String b,c;
+    Anim(String b,String c)
+    {
+        this.b = b;
+        this.c = c;
+    }
+    public String getBreed()
+    {
+        return b;
+    }
+    public String getColour()
+    {
+        return c;
+    }
+    public abstract void speak();
+}
+class Dog extends Anim
+{
+    Dog(String b, String c)
+    {
+        super(b,c);
+    }
+
+    public void speak()
+    {
+        System.out.println("Dog barks"+"nbreed = "+getBreed()+"ncolour = "+getColour());
+    }
+}
+class Cat extends Anim
+{
+    Cat(String b, String c)
+    {
+            super(b,c);
+    }
+    public void speak()
+    {
+        System.out.println("Cat meows"+"nbreed = "+getBreed()+"n colour = "+getColour());
+    }
+}
+public class animal
+{
+    public static void main(String args[])
+    {
+        Cat c = new Cat("Persian","white");
+        Dog d = new Dog("german shephard","black");
+        d.speak();
+        c.speak();
+    }
+}
+
+-------------------------------------------------------------------------------------------------------
+
+3:
+OVERLOAD(print function)
+
+import java.util.Scanner;
+class Print
+{
+    public void print()
+    {
+        System.out.println("NULL argument");
+    }
+    public void print(int x)
+    {
+        System.out.println("Integer argument"+ x);
+    }
+    public void print(float x)
+    {
+        System.out.println("float argument"+x);
+    }
+}
+public class overload
+{
+    public static void main(String args[])
+    {
+        Print a1 = new Print();
+        Print b1 = new Print();
+        Print c1 = new Print();
+        a1.print();
+        b1.print(5);
+        c1.print(5.5f);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+
+4:
+inheritance(vehicle)
+
+import java.util.*;
+abstract class Vehicle
+{
+
+    public abstract void start();
+    public void stop()
+    {
+        System.out.println("Vehicle Stoped");
+    }
+}
+class twowheeler extends Vehicle
+{
+        public void start()
+        {
+                System.out.println("twowheeler Started");
+        }   
+}
+class fourwheeler extends Vehicle
+{
+        public void start()
+        {
+                System.out.println("fourwheeler Started");
+        }
+}
+public class vehic
+{
+    public static void main(String args[])
+    {
+        twowheeler t1 = new twowheeler();
+        fourwheeler f1 = new fourwheeler();
+        t1.start();
+        t1.stop();
+        f1.start();
+        f1.stop();
+    }
+}
