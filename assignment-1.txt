@@ -1,0 +1,213 @@
+------------------------------------------------------------------------------------------------------
+SOLUTION 1:
+
+AREA OF REACTANGLE
+
+import java.util.Scanner;
+class area
+{
+  private int length;
+  private int breadth;
+
+  public int getLength()
+  {
+	return length;
+  }
+  public void setLength(int x)
+  {
+	length = x;
+  }
+  public int getBreadth()
+  {
+	return breadth;
+  }
+  public void setBreadth(int x)
+  {
+	breadth = x;
+  }
+  public void find()
+  {
+	double area = length * breadth;
+	System.out.println("The area of rectangle is "+area);
+  }
+}
+
+public class rectangle
+{
+  public static void main(String[] args)
+  {
+	area a = new area();
+	Scanner sc = new Scanner(System.in);
+	int l = sc.nextInt();
+	int b = sc.nextInt();
+	a.setLength(l);
+	a.setBreadth(b);
+	a.find();
+  }
+
+}
+
+
+---------------------------------------------------------------------------------------------------------
+
+SOLUTION 2:
+
+DISPLAY COMPLEX NUMBER
+
+import java.util.Scanner;
+class complexs
+{
+  private int real;
+  private int imag;
+
+  public int getReal()
+  {
+	return real;
+  }
+  public void setReal(int x)
+  {
+	real = x;
+  }
+  public int getImag()
+  {
+	return imag;
+  }
+  public void setImag(int x)
+  {
+	imag = x;
+  }
+  public void show()
+  {
+
+	System.out.println("The complex no  is "+real+" + "+imag+"i");
+  }
+}
+
+public class complex
+{
+  public static void main(String[] args)
+  {
+	complexs a = new complexs();
+	Scanner sc = new Scanner(System.in);
+	int real = sc.nextInt();
+	int imag = sc.nextInt();
+	a.setReal(real);
+	a.setImag(imag);
+	a.show();
+  }
+
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+SOLUTION 3:
+
+SECOND LARGEST ELEMENT IN ARRAY
+
+import java.util.Scanner;
+class largest
+{
+  int n ;
+  public int getN()
+  {
+	return n;
+  }
+  public void setN(int x)
+  {
+	n = x;
+  }
+  public void find(int[] a)
+  {
+	for(int i = 0; i < n; i++)
+	{
+	   for(int j = i + 1; j < n; j++)
+	   {
+		if(a[i] > a[j])
+		{
+			int tmp = a[i];
+			a[i] = a[j];
+			a[j] = tmp;
+		}
+	    }
+	}
+	System.out.println("The second largest number is: "+a[n - 2]);
+  }
+}
+
+public class larray
+{
+  public static void main(String[] args)
+  {
+	largest l = new largest();
+	Scanner sc = new Scanner(System.in);
+	int []a = new int[10];
+	for(int i = 0; i < 10; i++)
+	{
+	  a[i] = sc.nextInt();
+	}
+	l.setN(10);
+	l.find(a);
+  }
+
+}
+
+---------------------------------------------------------------------------------------------------------------------
+SOLUTION 4:
+
+AN EXAMPLE CODE OF STATIC BLOCK
+
+
+class SBLOCK {
+    static int i;
+    int j;
+    static {
+        i = 10;
+        System.out.println("static block ");
+    }
+    SBLOCK(){
+        System.out.println("Constructor");
+    }
+}
+ 
+public class Main {
+    public static void main(String args[]) {
+ 
+       SBLOCK t1 = new SBLOCK();
+       SBLOCK t2 = new SBLOCK();
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+SOLUTION 5:
+
+WAVEFORM ARRAY
+
+import java.util.Scanner;
+
+public class wavearray
+{
+  public static void main(String[] args)
+  {
+	Scanner sc = new Scanner(System.in);	
+	int []a = new int[10];
+	for(int i = 0; i < 10; i++)
+	{
+	 a[i] = sc.nextInt();
+	}
+	for(int j = 0; j < 10; j += 2)
+	{
+		int tmp = a[j];
+		a[j] = a[j + 1];
+		a[j + 1] = tmp;
+	}
+
+	for(int i = 0; i < 10; i++)
+	{
+		System.out.print(a[i]+" ");
+	}
+	
+  }
+
+}
+
