@@ -23,7 +23,7 @@ else
 return 0;
 
 }
-static void display(int x){
+public static void display(int x){
 if(x==1)
 System.out.println("Leap Year");
 
