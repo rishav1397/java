@@ -6,29 +6,29 @@ AREA OF REACTANGLE
 import java.util.Scanner;
 class area
 {
-  private int length;
-  private int breadth;
+  private int l;
+  private int b;
 
-  public int getLength()
+  public int getl()
   {
-	   return length;
+	   return l;
   }
-  public void setLength(int l)
+  public void setl(int l1)
   {
-	 length = l;
+	 l = l1;
   }
-  public int getBreadth()
+  public int getb()
   {
-	   return breadth;
+	   return b;
   }
-  public void setBreadth(int b)
+  public void setB(int b1)
   {
-	breadth = b;
+	b = b1;
   }
   public void find()
   {
-	double Area = length * breadth;
-	System.out.println("The area of rectangle is "+Area);
+	double A = l * b;
+	System.out.println("The area of rectangle is "+A);
   }
 }
 
@@ -40,8 +40,8 @@ public class rectangle
 	Scanner sc = new Scanner(System.in);
 	int l = sc.nextInt();
 	int b = sc.nextInt();
-	a.setLength(l);
-	a.setBreadth(b);
+	a.setl(l);
+	a.setB(b);
 	a.find();
   }
 
@@ -57,29 +57,29 @@ DISPLAY COMPLEX NUMBER:
 import java.util.Scanner;
 class complexs
 {
-  private int real;
-  private int imag;
+  private int r;
+  private int i;
 
-  public int getReal()
+  public int getR()
   {
-	return real;
+	return r;
   }
-  public void setReal(int x)
+  public void setR(int x)
   {
-	real = x;
+	r = x;
   }
-  public int getImag()
+  public int getI()
   {
-	return imag;
+	return i;
   }
-  public void setImag(int x)
+  public void setI(int x)
   {
-	imag = x;
+	i = x;
   }
   public void show()
   {
 
-	System.out.println("The complex no  is "+real+" + "+imag+"i");
+	System.out.println("The complex no  is "+r+" + "+i+"i");
   }
 }
 
@@ -89,10 +89,10 @@ public class complex
   {
 	complexs a = new complexs();
 	Scanner sc = new Scanner(System.in);
-	int real = sc.nextInt();
-	int imag = sc.nextInt();
-	a.setReal(real);
-	a.setImag(imag);
+	int r = sc.nextInt();
+	int i = sc.nextInt();
+	a.setR(r);
+	a.setI(i);
 	a.show();
   }
 
@@ -104,53 +104,27 @@ SOLUTION 3:
 
 SECOND LARGEST ELEMENT IN ARRAY
 
-import java.util.Scanner;
-class largest
-{
-  int n ;
-  public int getN()
-  {
-	return n;
-  }
-  public void setN(int x)
-  {
-	n = x;
-  }
-  public void find(int[] a)
-  {
-	for(int i = 0; i < n; i++)
-	{
-	   for(int j = i + 1; j < n; j++)
-	   {
-		if(a[i] > a[j])
-		{
-			int tmp = a[i];
-			a[i] = a[j];
-			a[j] = tmp;
-		}
-	    }
-	}
-	System.out.println("The second largest number is: "+a[n - 2]);
-  }
+import java.util.*;
+public class largest{
+    public static void main(String[] a1)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n+1];
+        int m1=0,m2=0;
+        for(int i=0;i<n;i++)
+        a[i]=sc.nextInt();
+        for(int i=0;i<n;i++){
+            if(m1<a[i]){
+                m2=m1;
+                m1=a[i];
+            }
+            else if(m2<m1&&m1>a[i])
+            m2=a[i];
+        }
+        System.out.print(m2);
+    }
 }
-
-public class larray
-{
-  public static void main(String[] args)
-  {
-	largest l = new largest();
-	Scanner sc = new Scanner(System.in);
-	int []a = new int[10];
-	for(int i = 0; i < 10; i++)
-	{
-	  a[i] = sc.nextInt();
-	}
-	l.setN(10);
-	l.find(a);
-  }
-
-}
-
 ---------------------------------------------------------------------------------------------------------------------
 SOLUTION 4:
 
@@ -189,9 +163,10 @@ public class wavearray
 {
   public static void main(String[] args)
   {
-	Scanner sc = new Scanner(System.in);	
-	int []a = new int[10];
-	for(int i = 0; i < 10; i++)
+	Scanner sc = new Scanner(System.in);
+	int n=sc.nextInt();
+	int a[] = new int[n+1];
+	for(int i = 0; i < n; i++)
 	{
 	 a[i] = sc.nextInt();
 	}
@@ -200,6 +175,8 @@ public class wavearray
 		int tmp = a[j];
 		a[j] = a[j + 1];
 		a[j + 1] = tmp;
+		if(n-i==3)
+		break;
 	}
 
 	for(int i = 0; i < 10; i++)
