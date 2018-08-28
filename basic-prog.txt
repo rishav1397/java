@@ -67,27 +67,31 @@ System.out.println("Greatest of given three numbers is "+d);
 }
 }
 5.verify palindrome no.-----
-import java.util.*;
-class checkPalindrome{
-static int palin(int n){
-int rev=0,rem;
-while(n!=0){
-rem=n%10;
-rev=rev*10+rem;
-n/=10;
-}
-return rev;
-}
-
-public static void main(String args[]){
-Scanner sc=new Scanner(System.in);
-int n=sc.nextInt();
-int x=palin(n);
-if(n==x)
-System.out.println("Palindrome");
-else
-System.out.println("Not a palindrome");
-}
+import java.util.Scanner;
+public class Palindrome
+{
+    public static void main(String args[])
+    {
+        int n, m, a = 0,x;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter any number:");
+        n = s.nextInt();
+        m = n;
+        while(n > 0)
+        {
+            x = n % 10;
+            a = a * 10 + x;
+            n = n / 10;
+        }
+        if(a == m)
+        {
+            System.out.println("Given number "+m+" is Palindrome");
+        }
+        else
+        {
+            System.out.println("Given number "+m+" is Not Palindrome");
+        }
+    }
 }
 6.verify prime no---------
 import java.util.*;
