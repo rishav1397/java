@@ -1,0 +1,57 @@
+SOL 1:
+
+import java.util.Scanner;
+class Base
+{
+	public void showBase()
+	{
+		System.out.println("Function called without object");
+	}
+}
+public class parent extends Base 
+{
+	public static void main(String args[])
+	{
+		parent obj = new parent();
+		obj.showBase();
+	}
+}
+
+---------------------------------------------------
+
+SOL 2:
+
+import java.util.Scanner;
+
+
+public class constructor
+{
+	constructor(int x)
+	{
+		super();
+	}
+	public static void main(String args[])
+	{
+		constructor obj = new constructor(5);
+	}
+}
+
+------------------------------------------
+
+SOL 3:
+
+import java.util.Scanner;
+final class A
+{
+	A()
+	{
+		System.out.println("finals class");
+	}
+}
+public class noextend extends A
+{
+	public static void main(String args[])
+	{
+		
+	}
+}
