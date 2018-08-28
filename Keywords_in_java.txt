@@ -3,17 +3,17 @@ SOL 1:
 import java.util.Scanner;
 class Base
 {
-	public void showBase()
+	public void show()
 	{
 		System.out.println("Function called without object");
 	}
 }
 public class parent extends Base 
 {
-	public static void main(String args[])
+	public static void main(String[] a)
 	{
 		parent obj = new parent();
-		obj.showBase();
+		obj.show();
 	}
 }
 
@@ -26,13 +26,13 @@ import java.util.Scanner;
 
 public class constructor
 {
-	constructor(int x)
+	constructor(int x1)
 	{
 		super();
 	}
 	public static void main(String args[])
 	{
-		constructor obj = new constructor(5);
+		constructor o1 = new constructor(101);
 	}
 }
 
@@ -45,7 +45,7 @@ final class A
 {
 	A()
 	{
-		System.out.println("finals class");
+		System.out.println("class can not be extended");
 	}
 }
 public class noextend extends A
