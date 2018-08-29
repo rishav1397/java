@@ -1,0 +1,113 @@
+1.-------------------------------------------------------
+Interfaces--
+interface Animals
+{
+	void speak();
+	void eat();
+}
+class Cat implements Animals
+{
+	public void speak()
+	{
+		System.out.println("Cat ");
+	}
+	public void eat()
+	{
+		System.out.println("Cat Drinks milk");
+	}
+}
+class Dog implements Animals
+{
+	public void speak()
+	{
+		System.out.println("Dog barks");
+	}
+	public void eat()
+	{
+		System.out.println("Dog eats bone");
+	}
+}
+public class Q1
+{
+	public static void main(String args[])
+	{
+		Cat c=new Cat();
+		Dog d=new Dog();
+		c.speak();
+		c.eat();
+		d.speak();
+		d.eat();
+	}
+}
+2.-------------------------------------------------------------------------------------------------
+abstracts
+import java.util.*;
+import java.lang.*;
+
+abstract class Animals
+{
+	String color,breed,name;
+	abstract void eat();
+	void speak(){}
+}
+class Cat extends Animals
+{
+	void eat()
+	{
+		System.out.println("Cat drinks milk");
+	}
+	void speak()
+	{
+		System.out.println("Cat meows");
+
+	}
+}
+class Dog extends Animals
+{
+	void eat()
+	{
+		System.out.println("Dog eats bone");
+	}
+	void speak()
+	{
+		System.out.println("Dog barks");
+
+	}
+}
+public class Q2
+{
+	public static void main(String args[])
+	{
+		Cat c=new Cat();
+		Dog d=new Dog();
+		c.speak();
+		c.eat();
+		d.speak();
+		d.eat();
+	}
+}
+3.--------------------------------------------------------------------------------------------------------------------------------
+typecast the user defined string to integer and then find the greatest one
+import java.util.*;
+import java.lang.*;
+
+public class Q3
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		String s1=sc.nextLine();
+		String s2=sc.nextLine();
+		int a,b;
+		a=Integer.parseInt(s1);
+		b=Integer.parseInt(s2);
+		if(a>b)
+		{
+			System.out.println("s1 is greater and its value is: "+a);
+		}
+		else
+		{
+			System.out.println("s2 is greater and its value is: "+b);
+		}
+	}
+}
